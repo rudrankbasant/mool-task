@@ -27,8 +27,9 @@ class AuthRepo {
     } else {
       // If the server did not return a 200 OK response,
       // then throw an exception.
-      debugPrint(response.body);
-      throw Exception('Failed to fetch (sign up)');
+      final jsonError = jsonDecode(response.body);
+      debugPrint(jsonError['detail']);
+      throw Exception(jsonError['detail']);
     }
   }
 
@@ -51,8 +52,9 @@ class AuthRepo {
     } else {
       // If the server did not return a 200 OK response,
       // then throw an exception.
-      debugPrint(response.body);
-      throw Exception('Failed to fetch (login)');
+      final jsonError = jsonDecode(response.body);
+      debugPrint(jsonError['detail']);
+      throw Exception(jsonError['detail']);
     }
   }
 }
