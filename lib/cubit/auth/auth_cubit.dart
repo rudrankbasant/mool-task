@@ -35,7 +35,7 @@ class AuthCubit extends Cubit<AuthState> {
     try {
       final signUpResp = await _authRepo.signup(user);
       if (signUpResp.message == "User created") {
-        showCustomFlushbar("Success", signUpResp.message.toString(), context);
+        showCustomFlushbar("Success", "User Created! Logging In", context);
         emit(SignInState());
       } else {
         emit(SignUpFailed(error: signUpResp.message??"Sign Up Failed"));

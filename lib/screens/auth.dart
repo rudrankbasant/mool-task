@@ -81,6 +81,26 @@ class _AuthScreen extends State<AuthScreen> {
                 ],
               ),
             );
+          }else if(state is SignInState){
+            loginUser();
+            return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  CircularProgressIndicator(color: Colors.white),
+                  SizedBox(
+                    height: 40,
+                  ),
+                  Text(
+                    'Loading...',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20),
+                  )
+                ],
+              ),
+            );
           } else {
             return LayoutBuilder(builder: (context, constraint) {
               return SingleChildScrollView(
