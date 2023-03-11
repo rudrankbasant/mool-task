@@ -1,5 +1,5 @@
 # Mool-Task
-I have completed the tast (with the bonus) but couldn't add more fucntionalities from my side as I have exams from tomorrow.
+I have completed the tast (with the bonus) but couldn't add enhancement functionalities from my side as I have exams from tomorrow.
 
 ## SplashScreen
 The package used to implement this was [flutter_native_splash](https://pub.dev/packages/flutter_native_splash)
